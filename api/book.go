@@ -57,21 +57,21 @@ func AddBook(c *fiber.Ctx) error {
 	json.Unmarshal([]byte(c.Body()), &book)
 
 	if len(book.Name) < 3 {
-		c.Status(500).Send([]byte("name is nil"))
+		c.Status(500).Send([]byte("name cannot be less than 3 characters"))
 		book.Author = ""
 		book.Rating = 0
 		return nil
 	}
 
 	if len(book.Author) < 3 {
-		c.Status(500).Send([]byte("author is nil"))
+		c.Status(500).Send([]byte("author cannot be less than 3 characters"))
 		book.Name = ""
 		book.Rating = 0
 		return nil
 	}
 
 	if book.Rating == 0 || book.Rating > 5 {
-		c.Status(500).Send([]byte("rating is nil"))
+		c.Status(500).Send([]byte("rating must be between 1-5"))
 		book.Name = ""
 		book.Author = ""
 		return nil
