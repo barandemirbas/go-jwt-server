@@ -8,6 +8,8 @@
     <a href="#">Contribute</a>
     &middot;
     <a href="#">Explore</a>
+    <br>
+    <img src="https://img.shields.io/badge/license-MIT-green" />
   </p>
 </p>
 
@@ -30,8 +32,7 @@ Start MongoDB
 ```
 $ mongod
 ```
-Rename ```.env.sample``` to ```.env```
-Set your Mongo URI and Secret key in ```.env``` and start the backend and client side server as well as connect to the MongoDB database
+Rename ```.env.sample``` to ```.env``` and set your Mongo URI and Secret key in ```.env``` and start the backend and client side server as well as connect to the MongoDB database
 
 ```
 $ go run main.go
