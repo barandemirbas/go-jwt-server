@@ -27,11 +27,10 @@ Get started by cloning the repository to your local machine
 $ git clone git@github.com:barandemirbas/go-jwt-server.git
 ```
 
-Start MongoDB
+Start [MongoDB](#mongodb-installation--setup) and run
 
-```
-$ mongod
-```
+```$ go get```
+
 Rename ```.env.sample``` to ```.env``` and set your Mongo URI and Secret key in ```.env``` and start the backend and client side server as well as connect to the MongoDB database
 
 ```
@@ -49,22 +48,6 @@ Start the Docker container
 $ docker run --name mongo-db -p 27017:27017 -d mongo:latest
 ```
 
-### Manual
-Get system username by running
+## License
 
-```
-$ whoami
-```
-
-Set database and directory permissions for you by running the command
-
-```
-$ sudo chown -Rv <username> /data/db
-# Enter your password
-```
-or for global access, run
-
-```
-$ sudo chown -r /data/db
-# Enter your password
-```
+go-jwt-server is provided under the MIT license. See [LICENSE](LICENSE)
