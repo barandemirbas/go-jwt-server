@@ -32,7 +32,7 @@ func GetMongoDbCollection(CollectionName string) (*mongo.Collection, error) {
 		return nil, err
 	}
 
-	collection := client.Database("rest-api").Collection(CollectionName)
+	collection := client.Database(config.GetEnv("DB_NAME")).Collection(CollectionName)
 
 	return collection, nil
 }
